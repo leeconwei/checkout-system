@@ -62,4 +62,3 @@ To Visit App:
 _Checkout_ is the core business logic for problem, containing the logic required for the special pricing rules for different level of Business Owner on certain products as well as totalling a set of cart items, either for the Associate or Diamond level recipient.
 
 _data_ contains all the online store data, eg. product list and pricing rules.
-# checkout-system
