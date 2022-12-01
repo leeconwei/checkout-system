@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Checkout System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a front-end implementation of a checkout system.
+It's built using React.js.
+
+## Problem statement
+
+For the purpose of this exercise, you need to create a checkout system for an online store. 
+Our goal, to offer different amount of discount for different level of recipients. We want to offer different amount of discount for different level of target audience:
+
+Level:
+
+- Associate, get 5% discount on all non-promotional items
+- Diamond, get 20% discount on all non-promotional items
+
+Product Price List
+
+- Kone, RM 3488.99
+- Ironhide Cartridge, RM 529.99
+
+We established a number of special pricing rules for different level of Business Owner on certain products. For item that does not meet the special pricing rules will still be considered as non-promotional items.
+
+Diamond
+
+1. Get a discount on Kone where 3 or more purchased. The price dropped to RM 2588.99 per unit.
+2. Get a 3 for 2 deal on Ironhide Cartridge
+
+These deals are regularly renegotiated, so we want the pricing rules to be as flexible as possible as they can change in the future with little notice.
+
+Example scenarios:
+
+- RECIPIENT: Associates
+  Cart Items: Kone, Ironhide Cartridge
+  Total Expected: RM 3818.03
+
+- RECIPIENT: Diamond
+  Cart Items: Kone, Kone, Kone, Kone, Ironhide Cartridge
+  Total Expected: RM 10779.95
 
 ## Available Scripts
 
-In the project directory, you can run:
+Clone down this repository. You will need node and npm installed globally on your machine.
 
-### `npm start`
+Installation:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+`npm install`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To Run Test Suite:
 
-### `npm test`
+`npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To Start Server:
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To Visit App:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Structure
 
-### `npm run eject`
+_Checkout_ is the core business logic for problem, containing the logic required for the special pricing rules for different level of Business Owner on certain products as well as totalling a set of cart items, either for the Associate or Diamond level recipient.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_data_ contains all the online store data, eg. product list and pricing rules.
+# checkout-system
