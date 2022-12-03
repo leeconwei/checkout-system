@@ -14,6 +14,9 @@ export const productList = [
   export const pricingRules = [
     {
       level: {
+        associate: {
+          normalDiscount: 5
+        },
         diamond: {
           normalDiscount: 20,
           itemDiscount: [
@@ -30,9 +33,6 @@ export const productList = [
               discountQuantity: 2
             }
           ]
-        },
-        associates: {
-          normalDiscount: 5
         }
       }
     }
